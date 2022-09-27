@@ -2,6 +2,7 @@
 /* variables */
 :root {
   --accent-color: #2196f3;
+  --secondary-accent-color: #188ce8;
   --text-color: #212121;
   --black-color: #000000;
   --white-color: #ffffff;
@@ -16,18 +17,93 @@
   --background-color-pink: #f5f4fa;
   --background-color-dark: #2f303a;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   font-family: var(--main-font), Arial, Helvetica, Verdana, sans-serif;
   font-size: var(--main-font-size);
   background-color: var(--background-color-white);
   color: var(--text-color);
 }
-.list {
-  list-style: none;
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* --------------------------------------------------------------------------- */
 /* common css (header and footer) */
 /* header */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 24px 0 25px 0;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  column-gap: 93px;
+}
+
 .logo {
   font-family: var(--accent-font);
   font-size: 26px;
@@ -42,8 +118,16 @@ body {
 .black-part {
   color: var(--black-color);
 }
-/* .site-list, */
+
+.site-list {
+  display: flex;
+  column-gap: 50px;
+}
+
 .contacts-list {
+  margin-left: auto;
+  display: flex;
+  column-gap: 50px;
   font-weight: 500;
 }
 .link {
@@ -68,12 +152,27 @@ body {
 footer {
   background-color: var(--background-color-dark);
 }
+
+.footer {
+  padding: 60px 15px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .white-part {
   color: var(--white-color);
 }
 .address-list {
   list-style: none;
 }
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-map {
   color: var(--white-color);
   line-height: 1.71;
@@ -96,9 +195,13 @@ footer {
 
 /* --------------------------------------------------------------------------- */
 /* сss for index.html */
+
+/* ===== HERO ===== */
 .hero {
   background: var(--background-color-dark);
-  text-align: center;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   color: var(--white-color);
@@ -107,6 +210,12 @@ footer {
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
+
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 .button-primary {
   color: var(--white-color);
@@ -119,14 +228,37 @@ footer {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+
+  min-width: 216px;
+  padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
 }
 
-.advantage-point {
+.button-primary:hover {
+  background-color: var(--secondary-accent-color);
+}
+
+/* ===== ADVANTAGES ===== */
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.advantages-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.advantage-title {
   font-weight: 700;
   font-size: var(--main-font-size);
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 .advantage-desc {
   font-size: var(--main-font-size);
@@ -135,6 +267,23 @@ footer {
   color: var(--gray-color);
 }
 
+/* ===== WHAT WE DO ===== */
+
+.work {
+  padding-top: 0;
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.work-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+/* ===== TEAM ===== */
 .team {
   background-color: var(--background-color-pink);
 }
@@ -143,9 +292,17 @@ footer {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
 }
 
-.team-link {
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.team-item {
   font-size: var(--secondary-font-size);
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -154,15 +311,26 @@ footer {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color);
   text-align: center;
+
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
+
+.team-item-avatar {
+  margin-bottom: 30px;
+}
+
 .person-name {
   color: var(--text-color);
   font-size: var(--secondary-font-size);
   font-weight: 500;
   letter-spacing: 0.03em;
+
+  margin-bottom: 10px;
 }
 .person-profession {
   color: var(--gray-color);
+
+  margin-bottom: 30px;
 }
 /* --------------------------------------------------------------------------- */
 /* сss for portfolio.html */
