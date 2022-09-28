@@ -95,7 +95,8 @@ body {
 .header-container {
   display: flex;
   align-items: center;
-  padding: 24px 0 25px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-nav {
@@ -241,6 +242,10 @@ footer {
 
 /* ===== ADVANTAGES ===== */
 
+.advantages {
+  padding-bottom: 47.5px;
+}
+
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
@@ -270,7 +275,7 @@ footer {
 /* ===== WHAT WE DO ===== */
 
 .work {
-  padding-top: 0;
+  padding-top: 47.5px;
 }
 
 .work-list {
