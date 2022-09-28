@@ -315,13 +315,12 @@ footer {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color);
-  text-align: center;
-
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
-.team-item-avatar {
-  margin-bottom: 30px;
+.team-item-wrapper {
+  padding: 30px 60px;
+  text-align: center;
 }
 
 .person-name {
@@ -334,8 +333,6 @@ footer {
 }
 .person-profession {
   color: var(--gray-color);
-
-  margin-bottom: 30px;
 }
 /* --------------------------------------------------------------------------- */
 /* сss for portfolio.html */
@@ -402,4 +399,8 @@ footer {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--gray-color);
+}
+
+.link:hover .result-subtitle {
+  color: var(--accent-color);
 }
