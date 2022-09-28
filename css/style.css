@@ -339,6 +339,16 @@ footer {
 }
 /* --------------------------------------------------------------------------- */
 /* сss for portfolio.html */
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
 .filter-button {
   font-weight: 500;
   font-size: var(--secondary-font-size);
@@ -349,7 +359,13 @@ footer {
   background-color: var(--background-color-pink);
   border-radius: 4px;
   cursor: pointer;
+
+  padding: 6px 20px;
 }
+.filter-button-different {
+  padding: 6px 25px;
+}
+
 .filter-button:hover,
 .filter-button:focus {
   color: var(--white-color);
@@ -358,11 +374,28 @@ footer {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
+
+/* ======= results ======== */
+
+.results-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.result-description-wrapper {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
 .result-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 .result-subtitle {
   font-size: var(--secondary-font-size);
