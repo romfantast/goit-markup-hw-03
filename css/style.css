@@ -378,7 +378,12 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  flex-basis: calc((100% - 3 * 30px) / 4);
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.link-for-result {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .result-description-wrapper {
@@ -399,8 +404,4 @@ footer {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--gray-color);
-}
-
-.link:hover .result-subtitle {
-  color: var(--accent-color);
 }
